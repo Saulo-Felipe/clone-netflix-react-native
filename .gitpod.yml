@@ -1,0 +1,26 @@
+additionalRepositories:
+  - url: https://github.com/saulo-felipe/<REPO_NAME>
+    checkoutLocation: <NAME_REPO_OR_FOLDER>
+
+tasks:
+  - name: "Config Git"
+    command: rm -rf ~/.gitconfig && git clone https://gist.github.com/8963dd086da31cd752d4696b8600999d.git gitconfig_test_folder && cp -r ./gitconfig_test_folder/.gitconfig ~/ && rm -rf gitconfig_test_folder && exit
+
+  - name: "Adding dependencies"
+    command: "sudo npm i -g nodemon expo-cli && rm -rf .git && exit"
+
+vscode:
+  extensions:
+    - dracula-theme.theme-dracula
+    - PKief.material-icon-theme
+    - naumovs.color-highlight
+    - dotenv.dotenv-vscode
+
+ports:
+  - port: 3000
+    onOpen: ignore
+    visibility: public
+
+  - port: 8081
+    onOpen: open-preview
+    visibility: public
