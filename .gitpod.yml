@@ -3,7 +3,7 @@ tasks:
     command: rm -rf ~/.gitconfig && git clone https://gist.github.com/8963dd086da31cd752d4696b8600999d.git gitconfig_test_folder && cp -r ./gitconfig_test_folder/.gitconfig ~/ && rm -rf gitconfig_test_folder && exit
 
   - name: "Adding dependencies"
-    command: "sudo npm i -g nodemon expo-cli && rm -rf .git && exit"
+    command: "sudo npm i -g nodemon expo-cli && exit"
 
 vscode:
   extensions:
