@@ -1,6 +1,7 @@
 import { Dimensions } from "react-native";
 import Animated from "react-native-reanimated";
 import styled from "styled-components/native";
+import Ionicon from "@expo/vector-icons/Ionicons";
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -24,19 +25,20 @@ export const AnimatedBg = styled(Animated.View)`
 //=========== Modal ===========//
 
 export const ModalContent = styled.View`
-  flex: 0.5;
-  flex-direction: row;
-  justify-content: flex-start;
+  background-color: #2b2b2b;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: #2b2b2b;
-  padding: 10px;
   margin-top: auto;
+  justify-content: space-between;
 `;
 
 export const ModalInfo = styled.View`
-  border: solid 1px blue;
   flex: 1;
+`;
+
+export const InfoContainer = styled.View`
+  flex-direction: row;
+  padding: 10px;
 `;
 
 export const ImageInfoPreview = styled.Image`
@@ -55,7 +57,6 @@ export const ReleaseDate = styled.Text`
   color: rgba(255, 255, 255, 0.5);
   margin-right: 10px;
 `;
-// #3c3c3c
 
 export const Classification = styled.Text`
   background-color: red;
@@ -66,4 +67,50 @@ export const Classification = styled.Text`
 
 export const Description = styled.Text`
   color: rgba(255, 255, 255, 0.85);
+  margin-top: 7px;
+`;
+
+export const IconsActionContainer = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+`;
+
+export const ActionIcon = styled(Ionicon)`
+  font-size: 25px;
+  background-color: #3c3c3c;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  vertical-align: center;
+
+  text-align: center;
+  textAlignVertical: center;
+  justify-content: space-between;
+`;
+
+export const IconContainer = styled.TouchableOpacity`
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+export const IconTitle = styled.Text`
+  color: rgba(255, 255, 255, 0.7);
+`;
+
+
+export const MoreInfo = styled.TouchableOpacity`
+  justify-content: space-between; 
+  flex-direction: row;
+  border-top-width: 1px;
+  border-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  margin-top: 10px;
+`;
+
+export const MoreInfoContainer = styled.View`
+  flex-direction: row; 
+  align-items: center;
 `;
